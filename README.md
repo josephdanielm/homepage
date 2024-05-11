@@ -1,2 +1,1 @@
-Template project for all future Vanilla JS projects!
-Set up with Vite, ESLint, and Prettier.
+Homepage project to practice responsive design.
