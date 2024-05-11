@@ -34,6 +34,11 @@ img {
   height: auto;
 }
 
+.unselectable {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 #app {
   min-height: 100dvh;
   position: relative;
@@ -44,4 +49,24 @@ img {
     radial-gradient(at bottom left, #193334, transparent);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+nav {
+  pointer-events: none;
+}
+
+.nav-logo-wrapper {
+  height: 150px;
+  width: fit-content;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.nav-logo-wrapper img {
+  height: 100%;
+  pointer-events: none;
+}
+
+.header-image-wrapper {
+  max-width: 300px;
 }
