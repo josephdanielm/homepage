@@ -49,16 +49,50 @@ img {
   user-select: none;
 }
 
+:root {
+  /* Firefly */
+  --firefly-950: #122728;
+  --firefly-900: #233e3e;
+  --firefly-800: #264949;
+  --firefly-700: #2b5a59;
+  --firefly-600: #326f6d;
+  --firefly-500: #418b88;
+  --firefly-400: #5ba6a2;
+  --firefly-300: #85c3be;
+  --firefly-200: #b3dcd7;
+  --firefly-100: #d9eeeb;
+  --firefly-50: #f4f9f8;
+
+  /* Cape Cod */
+  --CapeCod-950: #212a2b;
+  --CapeCod-900: #374242;
+  --CapeCod-800: #3a4848;
+  --CapeCod-700: #455958;
+  --CapeCod-600: #506a69;
+  --CapeCod-500: #5d7d7a;
+  --CapeCod-400: #789894;
+  --CapeCod-300: #a5bbb8;
+  --CapeCod-200: #cad7d5;
+  --CapeCod-100: #e3eae8;
+  --CapeCod-50: #f4f7f6;
+}
+
 #app {
   min-height: 100dvh;
   position: relative;
-  background-color: white;
   overflow: hidden;
-  background-image: radial-gradient(at top left, #80a2a2, transparent),
+  /* background-image: radial-gradient(at top left, #80a2a2, transparent),
     radial-gradient(at top right, hsl(183, 38%, 20%), transparent),
-    radial-gradient(at bottom left, #193334, transparent);
+    radial-gradient(at bottom left, #193334, transparent); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+#app::after {
+  content: "";
+  width: 100vw;
+  min-height: 100dvh;
+  background-color: red;
 }
 
 nav {
@@ -84,15 +118,87 @@ nav {
 .header-title {
   font-family: Tenor Sans;
   font-weight: 900;
+  color: #1b3b3d;
+  font-size: 3rem;
 }
 
 .header-body {
   font-family: Tenor Sans;
   font-weight: 500;
+  color: hsl(180, 11%, 15%);
 }
 
 .github-logo,
 .linkedin-logo {
   width: 25px;
-  fill: white;
+  fill: #e7faec;
+}
+
+/* Gradient BG */
+
+.gradient-bg-wrapper {
+  height: 100dvh;
+  width: 100dvw;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.gradient-bg-wrapper div {
+  position: absolute;
+  border-radius: 50%;
+  animation: gradient 8s infinite;
+}
+
+@keyframes gradient {
+  70% {
+    transform: scale(1.6) translate(50px);
+  }
+}
+
+.gradient-bg-wrapper div:nth-child(1) {
+  height: 90%;
+  width: 80%;
+  background-color: #000328;
+  left: -29%;
+  top: -10%;
+}
+
+.gradient-bg-wrapper div:nth-child(2) {
+  height: 80%;
+  width: 70%;
+  background-color: #001442;
+  right: -12%;
+  top: -12%;
+  animation-delay: 8s;
+}
+
+.gradient-bg-wrapper div:nth-child(3) {
+  height: 65%;
+  width: 80%;
+  background-color: #00245b;
+  bottom: -15%;
+  right: -20%;
+  animation-delay: 0.3s;
+}
+
+.gradient-bg-wrapper div:nth-child(4) {
+  height: 50%;
+  width: 75%;
+  background-color: #00458e;
+  bottom: -10%;
+  left: -18%;
+  animation-delay: 1.2s;
+}
+
+.gradient-bg-wrapper::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(200px);
 }
