@@ -50,31 +50,54 @@ img {
 }
 
 :root {
-  /* Firefly */
-  --firefly-950: #122728;
-  --firefly-900: #233e3e;
-  --firefly-800: #264949;
-  --firefly-700: #2b5a59;
-  --firefly-600: #326f6d;
-  --firefly-500: #418b88;
-  --firefly-400: #5ba6a2;
-  --firefly-300: #85c3be;
-  --firefly-200: #b3dcd7;
-  --firefly-100: #d9eeeb;
-  --firefly-50: #f4f9f8;
+  --celeste: #005c5b;
+  --celeste-100: #bdfffe;
+  --celeste-200: #7bfffe;
+  --celeste-300: #31ffff;
+  --celeste-400: #00fff6;
+  --celeste-500: #00eddc;
+  --celeste-600: #00bfb7;
+  --celeste-700: #009793;
+  --celeste-800: #007776;
+  --celeste-900: #005c5b;
 
-  /* Cape Cod */
-  --CapeCod-950: #212a2b;
-  --CapeCod-900: #374242;
-  --CapeCod-800: #3a4848;
-  --CapeCod-700: #455958;
-  --CapeCod-600: #506a69;
-  --CapeCod-500: #5d7d7a;
-  --CapeCod-400: #789894;
-  --CapeCod-300: #a5bbb8;
-  --CapeCod-200: #cad7d5;
-  --CapeCod-100: #e3eae8;
-  --CapeCod-50: #f4f7f6;
+  --mist: #d6e3b7;
+  --mist-100: #e9f0d7;
+  --mist-200: #d6e3b7;
+  --mist-300: #b8ce88;
+  --mist-400: #9dba61;
+  --mist-500: #7f9e44;
+  --mist-600: #627d33;
+  --mist-700: #4c612a;
+  --mist-800: #3e4e26;
+  --mist-900: #374324;
+
+  --orchid: #3f174c;
+  --orchid-100: #ead9f5;
+  --orchid-200: #dbbbec;
+  --orchid-300: #c693df;
+  --orchid-400: #ad68cd;
+  --orchid-500: #9149b0;
+  --orchid-600: #783a91;
+  --orchid-700: #653177;
+  --orchid-800: #562d62;
+  --orchid-900: #3f174c;
+
+  --lotus: #e1b4d4;
+  --lotus-100: #f7ecf4;
+  --lotus-200: #f0daea;
+  --lotus-300: #e1b4d4;
+  --lotus-400: #d393bf;
+  --lotus-500: #c272a7;
+  --lotus-600: #ad558b;
+  --lotus-700: #944272;
+  --lotus-800: #7b395f;
+  --lotus-900: #683351;
+
+  --lune: #ede8e2;
+  --lune-100: #ede8e2;
+  --lune-200: #ded4ca;
+  --lune-300: #c9b8a8;
 }
 
 #app {
@@ -100,7 +123,7 @@ nav {
 }
 
 .nav-logo-wrapper {
-  height: 150px;
+  height: 200px;
   width: fit-content;
   margin: 0 auto;
   pointer-events: none;
@@ -112,26 +135,26 @@ nav {
 }
 
 .header-image-wrapper {
-  max-width: 300px;
+  max-width: 600px;
 }
 
 .header-title {
-  font-family: Tenor Sans;
+  font-family: Nove;
   font-weight: 900;
-  color: #1b3b3d;
+  color: #fff;
   font-size: 3rem;
 }
 
 .header-body {
   font-family: Tenor Sans;
   font-weight: 500;
-  color: hsl(180, 11%, 15%);
+  color: #fff;
 }
 
 .github-logo,
 .linkedin-logo {
   width: 25px;
-  fill: #e7faec;
+  fill: #fff;
 }
 
 /* Gradient BG */
@@ -151,19 +174,19 @@ nav {
 .gradient-bg-wrapper div {
   position: absolute;
   border-radius: 50%;
-  animation: gradient 8s infinite;
+  /* animation: gradient 8s infinite; */
 }
 
-@keyframes gradient {
+/* @keyframes gradient {
   70% {
     transform: scale(1.6) translate(50px);
   }
-}
+} */
 
 .gradient-bg-wrapper div:nth-child(1) {
   height: 90%;
   width: 80%;
-  background-color: #000328;
+  background-color: var(--majesty-500);
   left: -29%;
   top: -10%;
 }
@@ -171,7 +194,7 @@ nav {
 .gradient-bg-wrapper div:nth-child(2) {
   height: 80%;
   width: 70%;
-  background-color: #001442;
+  background-color: var(--majesty-600);
   right: -12%;
   top: -12%;
   animation-delay: 8s;
@@ -180,7 +203,7 @@ nav {
 .gradient-bg-wrapper div:nth-child(3) {
   height: 65%;
   width: 80%;
-  background-color: #00245b;
+  background-color: var(--majesty-700);
   bottom: -15%;
   right: -20%;
   animation-delay: 0.3s;
@@ -189,7 +212,7 @@ nav {
 .gradient-bg-wrapper div:nth-child(4) {
   height: 50%;
   width: 75%;
-  background-color: #00458e;
+  background-color: var(--majesty-800);
   bottom: -10%;
   left: -18%;
   animation-delay: 1.2s;
