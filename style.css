@@ -113,12 +113,15 @@ body {
 
 #app {
   min-height: 100dvh;
+  padding: 0 4rem 3rem;
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   background-image: url("./src/assets/bluepurplegreen.png");
 }
+
+/* Nav */
 
 nav {
   pointer-events: none;
@@ -133,8 +136,19 @@ nav {
   margin: 0 auto;
 }
 
-.header-image-wrapper {
-  max-width: 600px;
+/* Header */
+
+header {
+}
+
+.header-image {
+  max-width: 40rem;
+  height: auto;
+  float: left;
+}
+
+.header-content-wrapper {
+  border: 1px solid white;
 }
 
 .header-title {
