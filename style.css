@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Sentient";
-  src: local("Sentient"), url("./src/assets/Sentient-Variable.ttf");
+  font-family: "Satoshi";
+  src: local("Satoshi"), url("./src/assets/Satoshi-Variable.ttf");
 }
 
 @font-face {
@@ -113,7 +113,7 @@ body {
 
 #app {
   min-height: 100dvh;
-  padding: 0 4rem 3rem;
+  padding: 0 6rem 3rem;
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
@@ -139,33 +139,144 @@ nav {
 /* Header */
 
 header {
+  display: flex;
+  align-items: center;
+  margin: 5rem 0;
+  min-height: 800px;
+}
+
+.header-image-wrapper {
+  width: 40vw;
 }
 
 .header-image {
-  max-width: 40rem;
-  height: auto;
-  float: left;
+  object-fit: cover;
+  aspect-ratio: 1;
+  object-position: center;
+  width: 100%;
 }
 
-.header-content-wrapper {
-  border: 1px solid white;
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1.5rem;
+  background-color: var(--orchid-800);
+  padding: 2.5rem 2rem 1.5rem 1.5rem;
 }
 
 .header-title {
   font-family: Bebas Neue;
-  font-weight: 900;
-  color: #fff;
-  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+  font-size: 4rem;
 }
 
 .header-body {
-  font-family: Sentient;
-  font-weight: 400;
-  color: #fff;
+  font-family: Satoshi;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  line-height: 1.618;
+}
+
+.header-socials-wrapper {
+  margin: 0 0 0 auto;
+}
+
+.header-socials-wrapper svg {
+  fill: var(--bleu-400);
 }
 
 .github-logo,
 .linkedin-logo {
-  width: 25px;
-  fill: var(--bleu-300);
+  width: 32px;
+}
+
+@media (width < 1200px) {
+  #app {
+    padding: 0 4rem 3rem;
+  }
+
+  header {
+    display: inline-block;
+  }
+
+  .header-image-wrapper {
+    float: left;
+    position: relative;
+    margin-bottom: -1rem;
+    margin-right: -0.3rem;
+  }
+
+  .header-image {
+    position: relative;
+    right: 30px;
+    bottom: 20px;
+  }
+
+  .about-wrapper {
+    display: block;
+    min-height: 541px;
+  }
+
+  .header-title {
+    text-align: center;
+  }
+}
+
+@media (width < 690px) {
+  #app {
+    padding: 0.5rem 1rem;
+  }
+
+  .joseph-mudd-nav-title {
+    font-size: 5rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-image-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-image {
+    position: static;
+    height: 40vh;
+  }
+
+  .header-title {
+    font-size: 3.5rem;
+  }
+
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .header-socials-wrapper {
+    margin: 0 auto;
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+/* Section */
+
+.my-work-heading {
+  font-family: Bebas Neue;
+  font-weight: 500;
+  color: white;
+  font-size: 4rem;
+}
+
+.project-cards-wrapper {
 }
