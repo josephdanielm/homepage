@@ -100,6 +100,10 @@ img {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./src/assets/bluepurplegreen.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .noselect {
@@ -113,12 +117,15 @@ body {
 
 #app {
   min-height: 100dvh;
-  padding: 0 6rem 3rem;
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-image: url("./src/assets/bluepurplegreen.png");
+  display: grid;
+  grid: auto auto auto / 1fr;
+  gap: 4rem;
+}
+
+nav,
+main,
+footer {
+  padding: 0 6rem;
 }
 
 /* Nav */
@@ -126,14 +133,24 @@ body {
 nav {
   pointer-events: none;
   display: flex;
+  position: relative;
 }
 
 .joseph-mudd-nav-title {
   font-family: Bebas Neue;
   color: var(--jade-300);
-  font-size: clamp(6rem, 20vw, 15rem);
+  font-size: clamp(3rem, 16vw, 15rem);
   letter-spacing: -0.05em;
   margin: 0 auto;
+}
+
+/* Main */
+
+main {
+  display: grid;
+  grid: auto auto / 1fr;
+  gap: 8rem;
+  position: relative;
 }
 
 /* Header */
@@ -141,8 +158,6 @@ nav {
 header {
   display: flex;
   align-items: center;
-  margin: 5rem 0;
-  min-height: 800px;
 }
 
 .header-image-wrapper {
@@ -182,22 +197,25 @@ header {
 
 .header-socials-wrapper {
   margin: 0 0 0 auto;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .header-socials-wrapper svg {
-  fill: var(--bleu-400);
+  fill: var(--jade-300);
+}
+
+.header-socials-wrapper svg:hover {
+  fill: var(--jade-400);
 }
 
 .github-logo,
-.linkedin-logo {
+.linkedin-logo,
+.external-link-icon {
   width: 32px;
 }
 
-@media (width < 1200px) {
-  #app {
-    padding: 0 4rem 3rem;
-  }
-
+@media (width < 1495px) {
   header {
     display: inline-block;
   }
@@ -219,19 +237,17 @@ header {
     display: block;
     min-height: 541px;
   }
+}
 
+@media (width < 1000px) {
   .header-title {
     text-align: center;
   }
 }
 
-@media (width < 690px) {
+@media (width < 770px) {
   #app {
     padding: 0.5rem 1rem;
-  }
-
-  .joseph-mudd-nav-title {
-    font-size: 5rem;
   }
 
   header {
@@ -279,4 +295,104 @@ header {
 }
 
 .project-cards-wrapper {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+  grid: 1fr 1fr 1fr 1fr 1fr 1fr / auto;
+  gap: 2rem 3rem;
+}
+
+.project-card {
+  display: grid;
+  grid: 2fr 1fr / 1fr;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.project-image {
+  border-radius: 6px 6px 0 0;
+}
+
+.project-info {
+  background-color: var(--bleu-600);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-name-and-icons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-name {
+  font-family: Bebas Neue;
+  font-size: 2rem;
+  color: white;
+}
+
+.project-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.external-link-icon,
+.github-logo {
+  fill: var(--jade-300);
+}
+
+.project-icon:hover {
+  fill: var(--jade-400);
+}
+
+.svg-link {
+  display: flex;
+}
+
+.project-description {
+  font-family: Satoshi;
+  font-weight: 500;
+  color: white;
+}
+
+/* Media Queries */
+
+@media (1024px < width < 1441px) {
+  nav,
+  main,
+  footer {
+    padding: 0 5rem;
+  }
+}
+
+@media (768px < width < 1025px) {
+  nav,
+  main,
+  footer {
+    padding: 0 4rem;
+  }
+}
+
+@media (550px < width < 769px) {
+  #app {
+    gap: 2rem;
+  }
+
+  nav,
+  main,
+  footer {
+    padding: 0 2rem;
+  }
+}
+
+@media (width < 551px) {
+  #app {
+    gap: 0.5rem;
+  }
+
+  nav,
+  main,
+  footer {
+    padding: 0 0.5rem;
+  }
 }
