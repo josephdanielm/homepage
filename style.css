@@ -201,11 +201,13 @@ header {
   gap: 0.5rem;
 }
 
-.header-socials-wrapper svg {
+.header-socials-wrapper svg,
+.footer-socials-wrapper svg {
   fill: var(--jade-300);
 }
 
-.header-socials-wrapper svg:hover {
+.header-socials-wrapper svg:hover,
+.footer-socials-wrapper svg:hover {
   fill: var(--jade-400);
 }
 
@@ -368,6 +370,56 @@ header {
   font-family: Satoshi;
   font-weight: 500;
   color: white;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--bleu-950);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+}
+
+.footer-body-text {
+}
+
+.footer-address {
+}
+
+.contact-list {
+}
+
+.contact-phone {
+}
+
+.phone-icon {
+}
+
+.contact-email {
+}
+
+.email-icon {
+}
+
+.footer-email {
+}
+
+.footer-socials-wrapper {
+}
+
+.footer-image-wrapper {
+}
+
+.footer-image {
 }
 
 /* Media Queries */
