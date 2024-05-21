@@ -141,7 +141,7 @@ nav {
 
 .joseph-mudd-nav-title {
   font-family: Bebas Neue;
-  color: var(--jade-300);
+  color: var(--jade-400);
   font-size: clamp(3rem, 16vw, 15rem);
   letter-spacing: -0.05em;
   margin: 0 auto;
@@ -328,7 +328,7 @@ header {
 }
 
 .project-info {
-  background-color: var(--bleu-600);
+  background-color: var(--orchid-800);
   padding: 0.5rem 1rem;
   border-radius: 0 0 6px 6px;
   display: flex;
