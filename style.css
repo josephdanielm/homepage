@@ -248,10 +248,6 @@ header {
 }
 
 @media (width < 770px) {
-  #app {
-    padding: 0.5rem 1rem;
-  }
-
   header {
     display: flex;
     flex-direction: column;
@@ -375,51 +371,106 @@ header {
 /* Footer */
 
 footer {
-  background-color: var(--bleu-950);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  display: flex;
+  background-color: var(--bleu-600);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: grid;
+  grid: 1fr / 2fr 3fr;
+  column-gap: 4rem;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
 }
 
 .footer-title {
+  font-family: Bebas Neue;
+  font-weight: 500;
+  color: white;
+  font-size: 4rem;
 }
 
 .footer-body-text {
+  font-family: Satoshi;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  line-height: 1.618;
 }
 
 .footer-address {
+  font-family: Satoshi;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: white;
 }
 
 .contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .contact-phone {
+  font-family: Satoshi;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.phone-icon {
+.phone-icon,
+.email-icon {
+  width: 32px;
+  fill: white;
 }
 
 .contact-email {
-}
-
-.email-icon {
-}
-
-.footer-email {
+  font-family: Satoshi;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .footer-socials-wrapper {
+  display: flex;
+  gap: 1rem;
 }
 
-.footer-image-wrapper {
+@media (width < 1151px) {
+  footer {
+    grid: 1fr / 1fr 1fr;
+    align-items: center;
+  }
+
+  .footer-image-wrapper {
+    height: 100%;
+  }
+
+  .footer-image {
+    object-fit: cover;
+    height: 100%;
+    width: auto;
+  }
 }
 
-.footer-image {
+@media (width < 769px) {
+  footer {
+    grid: auto auto / 1fr;
+    padding: 2rem 0 0;
+    padding-inline: 0;
+  }
+
+  .contact-info {
+    padding: 0 2rem 3rem;
+  }
 }
 
 /* Media Queries */
@@ -428,7 +479,7 @@ footer {
   nav,
   main,
   footer {
-    padding: 0 5rem;
+    padding-inline: 5rem;
   }
 }
 
@@ -436,30 +487,28 @@ footer {
   nav,
   main,
   footer {
-    padding: 0 4rem;
+    padding-inline: 4rem;
   }
 }
 
 @media (550px < width < 769px) {
   #app {
-    gap: 2rem;
+    gap: 4rem;
   }
 
   nav,
-  main,
-  footer {
-    padding: 0 2rem;
+  main {
+    padding-inline: 2rem;
   }
 }
 
 @media (width < 551px) {
   #app {
-    gap: 0.5rem;
+    gap: 4rem;
   }
 
   nav,
-  main,
-  footer {
-    padding: 0 0.5rem;
+  main {
+    padding-inline: 0.5rem;
   }
 }
